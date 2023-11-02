@@ -1,0 +1,51 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct batsman {
+   char name[25];
+   int runs, score, balls, toruns, tobal, ones, twos, threes, fours, sixes;
+   int max_six, max_run, max_four;
+   float str;
+   char snehasish[25]; // added variable
+} pl1[100], pl3;
+
+
+struct bowler {
+   char name[25];
+   int runsgv, wkttkn, overs;
+   int max_w;
+   float econ;
+   char snehasish[25]; // added variable
+} pl2[100], pl4;
+
+
+int main() {
+    int plno, choice;
+    int i, n, m;
+    printf("Enter the Batsman detail:\n");
+    printf("Enter the number of batsman:\n");
+    scanf("%d", &m);
+    for (i = 0; i < m; i++) {
+        printf("Enter name of batsman%d:\n", i + 1);
+        scanf("%s", pl1[i].name);
+        printf("Enter the nickname of batsman%d:\n", i + 1); // added prompt
+        scanf("%s", pl1[i].snehasish); // added input for snehasish variable
+        printf("Enter the number of ones scored by player%d:\n ", i + 1);
+        scanf("%d", &pl1[i].ones);
+        // ... rest of the code remains the same
+    }
+
+    printf("\nEnter the bowlers details:\n");
+    printf("Enter the number of bowlers:\n");
+    scanf("%d", &n);
+    for (i = 0; i < n; i++) {
+        printf("\nEnter name of bowler%d:", i + 1);
+        scanf("%s", pl2[i].name);
+        printf("Enter the nickname of bowler%d:\n", i + 1); // added prompt
+        scanf("%s", pl2[i].snehasish); // added input for snehasish variable
+        // ... rest of the code remains the same
+    }
+
+    // Rest of the code remains the same
+    // ...
+}
